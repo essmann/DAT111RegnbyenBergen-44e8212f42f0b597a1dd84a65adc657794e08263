@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sticky Center Scroll Animation</title>
+<style>
+  :root { --enter-dist: 80px; }
+
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    height: 400vh; /* lots of scroll */
+    background: #fafafa;
+  }
+
+  /* Sticky section */
+  .sticky-wrap {
+    position: sticky;
+    top: 0;
+    height: 100vh;          /* fill viewport */
+    display: flex;          /* center the headline */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headline {
+    font-size: clamp(32px, 8vw, 96px);
+    white-space: pre;       /* preserve spaces */
+    line-height: 1;
+    overflow: visible;
+    text-align: center;
+  }
+
+  .letter {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    transform: translate3d(calc(-1 * var(--enter-dist)), 0, 0);
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+</style>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="headline" id="headline"></div>
+</div>
+
+<script>
+  const text = "We refuse to accept a future";
+  const headline = document.getElementById("headline");
+
+  // Create spans
+  for (const ch of text) {
+    const span = document.createElement("span");
+    span.className = "letter";
+    span.textContent = ch;
+    headline.appendChild(span);
+  }
+  const letters = Array.from(document.querySelectorAll(".letter"));
+  const enterDist = 80;
+
+  function update() {
+    // progress from 0..1 based on scroll position
+    const scrollY = window.scrollY;
+    const winH = window.innerHeight;
+    // Adjust denominator to control speed (here: 2 * viewport height)
+    let t = scrollY / (2 * winH);
+    t = Math.min(Math.max(t, 0), 1);
+
+    letters.forEach((el, i) => {
+      const delay = i * 0.02;
+      const local = Math.min(Math.max((t - delay) / (1 - delay), 0), 1);
+      const x = (1 - local) * -enterDist;
+      el.style.transform = `translate3d(${x}px,0,0)`;
+      el.style.opacity = local;
+    });
+  }
+
+  window.addEventListener("scroll", () => requestAnimationFrame(update), {passive:true});
+  update();
+</script>
+</body>
+</html>

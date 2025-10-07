@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regnbyen Bergen</title>
+    <link rel="stylesheet" href="hjem2StyleSheet.css">
+    <!--<link rel="stylesheet" href="HamburgerMenyStyleSheet.css">-->
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <button class="menu-button" id="menuBtn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+
+    <div class="dropdown-menu" id="menu">
+        <a href="index.html">Hjem</a>
+        <a href="ProduktSide/ProduktSide.html">Produkter</a>
+        <a href="OmOss/OmOss.html">Om Oss</a>
+    </div>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <video 
+                id="bgVideo" 
+                class="video-background" 
+                autoplay 
+                loop 
+                playsinline
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23001028' width='1920' height='1080'/%3E%3C/svg%3E"
+            >
+                <source src="OmOss/Trailer.mov" type="video/mp4">
+                Din nettleser støtter ikke video.
+            </video>
+        </div>
+
+        <div class="video-controls">
+            <button class="control-btn" id="muteBtn" aria-label="Lyd av/på" title="Lyd av/på">
+                🔇
+            </button>
+            <button class="control-btn" id="playBtn" aria-label="Spill av/pause" title="Spill av/pause">
+                ⏸️
+            </button>
+        </div>
+
+        <div class="mute-indicator" id="muteIndicator">Lyd på</div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+    
+    <!-- Sticky Headline -->
+    <div class="sticky-wrap">
+        <div class="headline" id="headline"></div>
+    </div>
+
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <div class="content-wrapper">
+            <div class="card">
+                <div class="card-link">
+                    <img src="Bilder/BergenBilde.jpg" alt="Bergen" class="card-image">
+                    <div class="card__text-wrapper">
+                        <h2 class="card__title">Bergen Regnby</h2>
+                        <div class="card__small-text">En by med bare regn</div>
+                        <div class="card__details-wrapper">
+                            <p class="card__paragraph">Les mer om Bergen</p>
+                            <a href="https://no.wikipedia.org/wiki/Bergen" class="card__link">Les mer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-link">
+                    <img src="Bilder/Paraply.jpg" alt="Om Oss" class="card-image">
+                    <div class="card__text-wrapper">
+                        <h2 class="card__title">Produkter</h2>
+                        <div class="card__small-text">Se hva vi har å tilby</div>
+                        <div class="card__details-wrapper">
+                            <p class="card__paragraph">Produkter for fremtiden
+                            </p>
+                            <a href="ProduktSide/ProduktSide.html" class="card__link">Produkter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-link">
+                    <img src="Bilder/Team2.jpg" alt="Om Oss" class="card-image">
+                    <div class="card__text-wrapper">
+                        <h2 class="card__title">Vårt Team</h2>
+                        <div class="card__small-text">En fin gjeng</div>
+                        <div class="card__details-wrapper">
+                            <p class="card__paragraph">Lær om oss</p>
+                            <a href="OmOss/OmOss.html" class="card__link">Les mer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <h1 class="h1standard">Velkommen til Regnbyen Bergen A/S</h1>
+        <p class="standard">Regnbyen Bergen A/S er et selskap som jobber hardt for at du skal kunne leve et meir komfortabelt liv i Bergen.
+            Vi tilbyr produkt som gjør livet enklere på triste, mørke, og regnfulle dager. Vi er lite uavhengig selskap som er
+            motiverte for å hjelpe akuratt deg. Vår kundeservice har tid til å hjelpe alle.
+        </p>
+  
+
+
+
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Produkter som gjør det lille ekstra</h1>
+                    <p class="hero-text">Utforsk de beste produktene for regnværsdager i Bergen. Disse produktene pusher grenser. Di er designet for å virkelig gi regnværsdagen en ny level komfort.</p>
+                    <div class="hero-buttons">
+                        <a href="ProduktSide/ProduktSide.html" class="hero-btn hero-btn-primary">Produkter</a>
+                        <a href="#" class="hero-btn hero-btn-secondary">Les mer</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="ProduktSide/Bilder/Regnjakke.jpg" alt="Hero Image" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <p class="standard">BERGEN REGNBY ABONNEMENT</p>
+        <h1 class="h1standard">Priser</h1>
+        <p class="standard" style="max-width: 600px;">Priser over våre abonnement der du får tilgang til både arrangement og ekslusive produkter.</p>
+
+        <div class="pricing-table">
+            <div class="pricing-card">
+                <h2 class="pricing-title">LITE</h2>
+                <p class="pricing-price">kr 99 / måned</p>
+                <ul class="pricing-features">
+                    <li>Tilgang til grunnleggende arrangement</li>
+                    <li>10% rabatt på alle produkter</li>
+                    <li>Nyhetsbrev med oppdateringer</li>
+                    <li>Date med Esey</li>
+                </ul>
+                <a href="ProduktSide/Betaling.html" class="pricing-button">Velg Lite</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <h2 class="pricing-title">STANDARD</h2>
+                <p class="pricing-price">kr 199 / måned</p>
+                <ul class="pricing-features">
+                    <li>Tilgang til alle arrangement</li>
+                    <li>20% rabatt på alle produkter</li>
+                    <li>Eksklusive produktlanseringer</li>
+                    <li>Prioritert kundeservice</li>
+                </ul>
+                <a href="ProduktSide/Betaling.html" class="pricing-button">Velg Standard</a>
+            </div>
+
+            <div class="pricing-card">
+                <h2 class="pricing-title">PREMIUM</h2>
+                <p class="pricing-price">kr 299 / måned</p>
+                <ul class="pricing-features">
+                    <li>Ubegrenset tilgang til alle arrangement</li>
+                    <li>30% rabatt på alle produkter</li>
+                    <li>Gratis frakt på alle bestillinger</li>
+                    <li>Eksklusive produktlanseringer</li>
+                </ul>
+                <a href="ProduktSide/Betaling.html" class="pricing-button">Velg Premium</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Video controls
+        const video = document.getElementById('bgVideo');
+        const playBtn = document.getElementById('playBtn');
+        const muteBtn = document.getElementById('muteBtn');
+        const muteIndicator = document.getElementById('muteIndicator');
+        const loadingScreen = document.getElementById('loadingScreen');
+
+        video.addEventListener('canplay', function() {
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 500);
+        });
+
+        playBtn.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+                playBtn.textContent = '⏸️';
+            } else {
+                video.pause();
+                playBtn.textContent = '▶️';
+            }
+        });
+
+        muteBtn.textContent = '🔊';
+        muteBtn.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+                muteBtn.textContent = '🔊';
+                showMuteIndicator('Lyd på');
+            } else {
+                video.muted = true;
+                muteBtn.textContent = '🔇';
+                showMuteIndicator('Lyd av');
+            }
+        });
+
+        function showMuteIndicator(text) {
+            muteIndicator.textContent = text;
+            muteIndicator.classList.add('show');
+            setTimeout(() => {
+                muteIndicator.classList.remove('show');
+            }, 1500);
+        }
+
+        video.addEventListener('error', function() {
+            console.error('Video kunne ikke lastes');
+            loadingScreen.classList.add('hidden');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            video.volume = 0.7;
+            const playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    video.muted = true;
+                    video.play().then(() => {
+                        muteBtn.textContent = '🔇';
+                        showMuteIndicator('Klikk for lyd');
+                    }).catch(err => {
+                        playBtn.textContent = '▶️';
+                    });
+                });
+            }
+        });
+
+        // Hamburger menu
+        const menuBtn = document.getElementById('menuBtn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', function() {
+            menuBtn.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!menuBtn.contains(e.target) && !menu.contains(e.target)) {
+                menuBtn.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+        
+                const text = "Det er etter regn at fuglene synger!";
+        const highlightWord = "synger!";
+        const headline = document.getElementById("headline");
+
+        // Bygg spans for bokstavene
+        const words = text.split(" ");
+        words.forEach((word, wi) => {
+        for (const ch of word) {
+            const span = document.createElement("span");
+            span.className = "letter";
+            if (word === highlightWord) {
+            span.classList.add("highlight");
+            }
+            span.textContent = ch;
+            headline.appendChild(span);
+        }
+        if (wi < words.length - 1) {
+            const space = document.createElement("span");
+            space.textContent = " ";
+            headline.appendChild(space);
+        }
+        });
+
+        const letters = Array.from(headline.querySelectorAll(".letter"));
+        const enterDist = 80;
+
+        function updateLetters() {
+        const scrollY = window.scrollY;
+        const winH = window.innerHeight;
+
+        let t1 = scrollY / winH;
+        t1 = Math.min(Math.max(t1, 0), 1);
+
+        let t2 = (scrollY - winH) / winH;
+        t2 = Math.min(Math.max(t2, 0), 1);
+
+        letters.forEach((el, i) => {
+            const delay = i * 0.02;
+            let y;
+
+            if (t2 > 0) {
+            const exitLocal = Math.min(Math.max((t2 - delay) / (1 - delay), 0), 1);
+            y = exitLocal * enterDist;
+            el.style.opacity = 1 - exitLocal;
+            } else {
+            const enterLocal = Math.min(Math.max((t1 - delay) / (1 - delay), 0), 1);
+            y = (1 - enterLocal) * -enterDist;
+            el.style.opacity = enterLocal;
+            }
+
+            el.style.transform = `translate3d(0, ${y}px, 0)`;
+        });
+        }
+
+        // Init
+        letters.forEach(el => {
+        el.style.transform = `translate3d(0, ${-enterDist}px, 0)`;
+        el.style.opacity = 0;
+        });
+
+        window.addEventListener("scroll", () => requestAnimationFrame(updateLetters), {passive: true});
+        updateLetters();
+    </script>
+</body>
+</html>

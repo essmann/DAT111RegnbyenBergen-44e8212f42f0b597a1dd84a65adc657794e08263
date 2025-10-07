@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Om Oss</title>
+        <link rel="stylesheet" href="OmOssStyleSheet.css">
+        <link rel="stylesheet" href="../hjem2StyleSheet.css">
+    </head>
+    <body>
+       <!-- Hamburger Menu -->
+    <button class="menu-button" id="menuBtn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+
+    <div class="dropdown-menu" id="menu">
+        <a href="index.html">Hjem</a>
+        <a href="ProduktSide/ProduktSide.html">Produkter</a>
+        <a href="OmOss/OmOss.html">Om Oss</a>
+    </div>
+        <h1 class="omoss-h1">Regnbyen Bergen A/S Ansatte</h1>
+        <div class="omoss-container">
+            <div class="omoss-card">
+                <button class = "omoss-button">Utvikler</button>
+                <h2 class="omoss-h2">Sander Varhaug</h2>
+                <p class="omoss-p">Utvikler i Regnbyen Bergen A/S. Ansvarlig for koding og teknisk implementering av nettsiden.</p>
+            </div>
+
+            <div class="omoss-card">
+                <button class = "omoss-button">Logo Designer</button>
+                <h2 class="omoss-h2">Omar</h2>
+                <p class="omoss-p">Designansvarlig i Regnbyen Bergen A/S. Fokuserer på brukeropplevelse og visuell identitet.</p>
+            </div>
+
+            <div class="omoss-card">
+                <button class = "omoss-button">Planlegger</button>
+                <h2 class="omoss-h2">William</h2>
+                <p class="omoss-p">Planlegger i Regnbyen Bergen A/S. Ansvarlig for prosjektledelse og koordinering av teamet.</p>
+            </div>
+
+            <div class="omoss-card">
+                <button class = "omoss-button">Wireframes og Design</button>
+                <h2 class="omoss-h2">Didrik Wasson</h2>
+                <p class="omoss-p">Designer i Regnbyen Bergen A/S. Ansvarlig for wireframes og visuell design.</p>
+            </div>
+
+            <div class="omoss-card">
+                <button class = "omoss-button">Markedsfører</button>
+                <h2 class="omoss-h2">Ken William</h2>
+                <p class="omoss-p">Markedsfører i Regnbyen Bergen A/S. Ansvarlig for markedsføring og kommunikasjon.</p>
+        </div>
+    </body>
+    <script>
+         const menuBtn = document.getElementById('menuBtn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', function() {
+            menuBtn.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!menuBtn.contains(e.target) && !menu.contains(e.target)) {
+                menuBtn.classList.remove('active');
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</html>
