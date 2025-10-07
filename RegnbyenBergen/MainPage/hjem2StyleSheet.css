@@ -293,7 +293,9 @@ body {
   z-index: 10000;
 }
 #menu a{
-  margin-left: 2rem;
+}
+#menu a:nth-child(1){
+  margin-top: 2rem;
 }
 
 .dropdown-menu.active {
